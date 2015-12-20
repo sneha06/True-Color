@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrueColor</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_game_over">GameOverActivity</string>
+    <string name="Instruction">You need to check if the name of the color written matches with the color displayed in the ring
+        if color matches press right button and if color does not match press wrong button.</string>
+</resources>

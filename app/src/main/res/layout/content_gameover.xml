@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".GameoverActivity"
+    tools:showIn="@layout/activity_gameover">
+
+    <ImageView
+        android:id="@+id/game_over_title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/game_over" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_over_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#576069"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <hackathon.perk.truegame.TextClass
+            android:id="@+id/congrats_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:text="Congrats!! You Made a New High Score"
+            android:textColor="@android:color/black"
+            android:textSize="33sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <hackathon.perk.truegame.TextClass
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="High Score : "
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/highScoreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <hackathon.perk.truegame.TextClass
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Your  Score"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/scoreView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/menu_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/imageView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/go_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/home" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/go_replay"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/replay"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/go_volume"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/volume"
+        android:layout_alignTop="@+id/go_replay"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+</RelativeLayout>
